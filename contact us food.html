@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Food Delivery Banner</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #A8DBA8;
+        }
+
+        .container {
+            width: 800px;
+            background-color: #e8f5e9;
+            padding: 40px;
+            border-radius: 20px;
+            display: flex;
+            justify-content: space-between;
+            box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.1);
+            position: relative;
+            overflow: hidden;
+        }
+
+        
+        .container::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(255,255,255,0.1) 20%, transparent 70%);
+            transform: translate(-50%, -50%);
+            z-index: 0;
+        }
+
+        
+        .text-content {
+            z-index: 1;
+            max-width: 400px;
+        }
+
+        .text-content h1 {
+            font-size: 36px;
+            color: #333;
+            margin: 0;
+        }
+
+        .text-content h1 span {
+            color: #43a047;
+        }
+
+        .text-content p {
+            color: #666;
+            margin: 10px 0 20px;
+            line-height: 1.6;
+        }
+
+        .button {
+            background-color: #43a047;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            text-transform: uppercase;
+            text-decoration: none;
+        }
+
+        .button:hover {
+            background-color: #388e3c;
+        }
+
+        
+        .image-content {
+            position: relative;
+            z-index: 1;
+            margin-left: 20px;
+        }
+
+        .image-content img {
+            width:200px;
+            height:200px
+            border-radius: 50%;
+            box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);
+        }
+
+       
+        .nav {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            display: flex;
+            gap: 20px;
+            font-size: 16px;
+            z-index: 1;
+        }
+
+        .nav a {
+            text-decoration: none;
+            color: #333;
+            font-weight: bold;
+            position: relative;
+        }
+
+        .nav a.active::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: -4px;
+            width: 100%;
+            height: 2px;
+            background-color: #43a047;
+        }
+
+    </style>
+</head>
+<body>
+
+<div class="container">
+   
+    <div class="nav">
+        <a href="index.html" class="active">Home</a>
+        <a href="index.html">Menu</a>
+        <a href="#">About Us</a>
+        <a href="#">Contact</a>
+        <a href="#">Sign Up</a>
+    </div>
+
+   
+    <div class="text-content">
+        <h1>We deliver <br> delicious & <span>healthy food</span></h1>
+        <p></p>
+        <a href="#" class="button">Order Now</a>
+    </div>
+
+    
+    <div class="image-content">
+        <img src="https://freevector-images.s3.amazonaws.com/uploads/vector/preview/132708/vecteezyorganic_food-backgroundYK0221_generated.jpg" alt="Healthy Food">
+    </div>
+</div>
+
+</body>
+</html>
